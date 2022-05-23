@@ -12,7 +12,7 @@ public class InsertionSort {
         }
     }
     public static void main(String[] args) {
-        int[] data = { -2, 45, 0, 11, -9, -10 };
+        int[] data = { -2, -10, 0, 11, -9, -45 };
         Insertion(data);
         for (int i = 0; i < data.length;  i++) {
             System.out.print(data[i] + " ");
