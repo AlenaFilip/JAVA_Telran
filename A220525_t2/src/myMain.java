@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
 
-public class Main {
+public class myMain {
     public static void main(String[] args) {
         // make ArrayList and field 1 000 000 elements
         ArrayList<String> numbArr = new ArrayList<>();
