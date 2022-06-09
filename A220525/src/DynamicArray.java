@@ -70,7 +70,7 @@ public class DynamicArray implements Dynamic {
         size = size *2;
         int[] array1 = new int[size];
         for (int i = 0; i < count; i++) {
-            array1[i] = array[i]
+            array1[i] = array[i];
         }
         array = array1;
     }

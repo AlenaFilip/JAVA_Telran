@@ -13,11 +13,23 @@ public class Main {
         list.add(1);
         list.add(4);
         list.add(2);
-        list.add(9);
+        list.add(null);
         System.out.println(list);
-        list = invert(list);
+//        System.out.println(invert(list));
+        invertAltList(list);
         System.out.println(list);
+    }
 
+    public static void invertAltList(List<Integer> lst){  // тк это void, сразу понимаем, что лист не новый
+        int right = lst.size()-1;
+        int left = 0;
+        while(left<right){
+            Integer tmp = lst.get(right);
+            lst.set(right, lst.get(left));
+            lst.set(left, tmp);
+            left++;
+            right--;
+        }
     }
 
     public static List<Integer> invert(List<Integer> lst){
@@ -28,5 +40,4 @@ public class Main {
         }
         return result;
     }
-
 }
