@@ -1,4 +1,5 @@
 public class Person implements Comparable<Person> {
+//public class Person {
     String firstName;
     String lastName;
     int age;
