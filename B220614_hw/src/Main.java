@@ -26,7 +26,8 @@ public class Main {
         int choice = sc.nextInt();
         switch (choice){
             case 1: films.sort(new byNameComparator()); break;
-            case 2: films.sort(new byRaitingComparator()); break;
+            case 2: Comparator<Film> comparator = new byRaitingComparator();
+                    films.sort(comparator.reversed()); break;
             case 3: films.sort(new byGenreComparator()); break;
             case 4: films.sort(new byYearComparator()); break;
             default: films.sort(new byNameComparator()); break;
