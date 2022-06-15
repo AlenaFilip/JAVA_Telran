@@ -26,27 +26,32 @@ public class Main {
         List<BankAccount> ls3 = new ArrayList<>();
         ls3.add(b31);
         ls3.add(b32);
-        Person ps3 = new Person("Anna",ls1);
+        Person ps3 = new Person("Masha",ls1);
         // делаю лист из персон
         List<Person> persons = new ArrayList<>();
         persons.add(ps1);
         persons.add(ps2);
         persons.add(ps3);
+        b11.setBalance(11000);
+        b12.setBalance(1200);
+        b2.setBalance(2000);
 
-        // вызываю метод, который создает лист  of BankAccountWithOwner для одного Person
-        // сколько у человека счетов, столько элементов в листе
-        List<BankAccountWithOwner> lst1 = creatList(ps1);
+        // вызываю метод создания List BankAccountWithOwner из List Person
+        List<BankAccountWithOwner> lst1 = creatList(persons);
         for (BankAccountWithOwner l: lst1) {
             System.out.println(l);
         }
 
     }
 
-    public static List<BankAccountWithOwner> creatList(Person person){
+    public static List<BankAccountWithOwner> creatList(List<Person> persons){
         List<BankAccountWithOwner> res = new ArrayList<>();
-        for (BankAccount s : person.lstBa) {
-            BankAccountWithOwner ba = new BankAccountWithOwner(person, s);
-            res.add(ba);
+        System.out.println(persons.size());
+        for (Person p: persons) {
+            for (BankAccount s : p.getLstBa()) {
+                BankAccountWithOwner ba = new BankAccountWithOwner(p, s);
+                res.add(ba);
+            }
         }
         return res;
     }

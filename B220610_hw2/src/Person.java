@@ -1,5 +1,3 @@
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
@@ -13,6 +11,10 @@ public class Person {
     public Person(String name, List<BankAccount> lstBa) {
         this.name = name;
         this.lstBa = lstBa;
+    }
+
+    public List<BankAccount> getLstBa() {
+        return lstBa;
     }
 
     public String getName() {
