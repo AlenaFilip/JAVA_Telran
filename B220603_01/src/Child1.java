@@ -10,10 +10,10 @@ public class Child1 extends Parent{
 
     public String doSomeThing2(){
         return "doSomeThing2: Child1 " +getProperty();
+//        return "doSomeThing2: Child1 " +property;
     }
 
     public  void  methodChild1(){
-
     }
 
 }

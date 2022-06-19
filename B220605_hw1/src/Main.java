@@ -8,6 +8,7 @@ public class Main {
         Clothes cl2 = new Clothes("Trousers ", 102.0);
         Clothes cl3 = new Clothes("Skirt ", 25.0);
 
+
         fp1.buy(2);
         fp2.buy(2);
         cl1.buy(1);
