@@ -13,9 +13,9 @@ public class Main {
         System.out.println("--------- all pairs --------------");
         System.out.println(isAllPairEqSumma(amount, list)); // Все пары
         System.out.println("--------- 1 pair with sort --------------");
-        System.out.println(isPairWithSort(amount, list)); // Все пары
+        System.out.println(isPairWithSort(amount, list)); // Сортировка, 1 цикл, поиск 1 пары
         System.out.println("--------- all pairs with sort --------------");
-        System.out.println(isAllPairWithSort(amount, list)); // Все пары
+        System.out.println(isAllPairWithSort(amount, list)); // Сортировка, 1 цикл, поиск всех пар (упрощенка, без повторного использования одного элемента)
     }
 
     public static String isAllPairWithSort(Integer amount, List<Integer> list){
