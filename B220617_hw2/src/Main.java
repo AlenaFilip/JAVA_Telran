@@ -15,7 +15,7 @@ public class Main {
         System.out.println("--------- 1 pair with sort --------------");
         System.out.println(isPairWithSort(amount, list)); // Сортировка, 1 цикл, поиск 1 пары
         System.out.println("--------- all pairs with sort --------------");
-        System.out.println(isAllPairWithSort(amount, list)); // Сортировка, 1 цикл, поиск всех пар (упрощенка, без повторного использования одного элемента)
+        System.out.println(isAllPairWithSort(amount, list)); // Сортировка, 1 цикл, поиск всех пар
     }
 
     public static String isAllPairWithSort(Integer amount, List<Integer> list){
@@ -26,8 +26,12 @@ public class Main {
         while (i<j){
             if (list.get(i)+list.get(j) == amount) {
                 result += System.lineSeparator() +"    " + list.get(i) + " + " + list.get(j);
-                i++;
-                j--;
+                if (i<list.size()-1 || list.get(i) == list.get(i+1)) i++;
+                else if (j>0 || list.get(j) == list.get(j-1)) j--;
+                else {
+                    i++;
+                    j--;
+                }
             } else if(list.get(i)+list.get(j) > amount) j--;
             else if (list.get(i)+list.get(j) < amount) i++;
         }
