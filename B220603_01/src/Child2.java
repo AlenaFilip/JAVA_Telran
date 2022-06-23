@@ -7,4 +7,5 @@ public class Child2 extends Parent {
     public String doSomeThing2(){
         return "doSomeThing2: Child2 " + getProperty();
     }
+
 }

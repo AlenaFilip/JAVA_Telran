@@ -1,5 +1,4 @@
 public class Child1 extends Parent{
-
     private String property;
 
 
@@ -12,6 +11,7 @@ public class Child1 extends Parent{
         return "doSomeThing2: Child1 " +getProperty();
 //        return "doSomeThing2: Child1 " +property;
     }
+
 
     public  void  methodChild1(){
     }
