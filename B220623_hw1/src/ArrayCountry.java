@@ -51,7 +51,6 @@ public class ArrayCountry implements Iterable <Country>{
         private int numb = 0;
 
         public Country next(){
-            System.out.println("ArIt");
             return arrayCountry[numb++];
         }
 
