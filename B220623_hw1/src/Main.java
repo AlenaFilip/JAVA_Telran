@@ -1,3 +1,4 @@
+/* реализовать динамический массив, сделать его Iterable и перебрать */
 import java.util.Iterator;
 
 public class Main {
@@ -14,7 +15,10 @@ public class Main {
         arc.add(cn3);
         arc.add(cn4);
 
-        Iterator<Country> iterator = arc.iterator();
+        Iterator <Country> iterator = arc.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
 
 
     }
