@@ -10,9 +10,11 @@ public class Main {
         User u2 =new User("Petya","Petrov","petya@dmx");
         User u3 =new User("Ivanov");
         User u4 =new User("Katya","Potapova","katya@tut.by");
+        User u41 =new User("Katya","Potapova","   ");
+        User u42 =new User("Katya","Potapova"," dd  ");
         User u5 =new User("Ivan","Ivanov","email5");
         List<User> list1 = Arrays.asList(new User[] {u1, u3,u4,u5});
-        List<User> list2 = Arrays.asList(new User[] {u1, u2,u2,u4});
+        List<User> list2 = Arrays.asList(new User[] {u1, u2,u2,u4,u41});
         List<User> list3 = Arrays.asList(new User[] {u1, u1,u5});
         Set<String> listEmails = new HashSet<>();
         listEmails = createListEmails(listEmails,list1);
@@ -24,9 +26,10 @@ public class Main {
 
     }
 
+    // добавляю в Set String - email, проверив на null и наличие "@"
     public static Set<String> createListEmails(Set<String> set, List<User> lst){
         for (User u: lst) {
-            if (u.getEmail()!=null) set.add(u.getEmail());
+            if (u.getEmail()!=null && u.getEmail().contains("@")) set.add(u.getEmail());
         }
         return set;
     }

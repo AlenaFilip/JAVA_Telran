@@ -8,7 +8,7 @@ public class Main {
         merge(arr, leftArr, rightArr) - merge two subarrays of arr[]
          */
 
-        int[] arr = {15, 21, 13, 5, 10, 7};
+        int[] arr = {15, 21, 13, 5, 10, 7,1,40,-1000};
         System.out.println(Arrays.toString(arr));
         mergeSort(arr);
         System.out.println(Arrays.toString(arr));

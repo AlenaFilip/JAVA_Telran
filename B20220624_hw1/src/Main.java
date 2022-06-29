@@ -9,14 +9,13 @@ public class Main {
     public static void main(String[] args) {
 
         Book[] arBooks = {
+            new Book("Hamlet","William","Shakespeare"),
+            new Book("Anna Karenina","Leo","Tolstoy"),
             new Book("Ulysses","James","Joyce"),
             new Book("In Search of Lost Time","Marcel","Proust"),
-            new Book("Ulysses","James","Joyce"),
-            new Book("Don Quixote","Miguel","de Cervantes"),
             new Book("One Hundred Years of Solitude","Gabriel Garcia","Marquez"),
             new Book("Moby Dick","Herman","Melville"),
-            new Book("War and Peace","Leo","Tolstoy"),
-            new Book("Hamlet","William","Shakespeare")
+            new Book("War and Peace","Leo","Tolstoy")
         };
         List<Book> books = Arrays.asList(arBooks);
         Set<Author> authors = new TreeSet<>();

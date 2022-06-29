@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        int num = 50;
+        int num = 55;
         int[] arr = new int[num + 1];
         for (int i = 2; i <= num; i++) {
             arr[i] = -1;
