@@ -33,7 +33,7 @@ public class Main {
         for (Student s: students3) {
             System.out.println(s);
         }
-     }
+    }
 
     public static List<Student> make3Students(Set<Student> set){
         List<Student> result = new ArrayList<>();
@@ -44,17 +44,17 @@ public class Main {
             if (count==0) break;
         }
         return result;
-     }
+    }
 
-     public static Set<Student> makeAllStudents(List<Group> groups){
+    public static Set<Student> makeAllStudents(List<Group> groups){
         Set <Student> result = new TreeSet<>();
-         for (Group g :groups) {
-             for (Student st: g.getStudents()) {
-                 result.add(st);
-             }
-         }
-         return result;
-     }
+        for (Group g :groups) {
+            for (Student st: g.getStudents()) {
+                result.add(st);
+            }
+        }
+        return result;
+    }
 
     public static Set <Student> best3Student(){
         Set<Student> result = new TreeSet<>();
