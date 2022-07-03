@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,7 +14,8 @@ public class Main {
         films.add(new Film("Moonlighting",4.5, g5, 2004));
         films.add(new Film("La terrazza",4.9, g3, 2015));
         films.add(new Film("Aaa",8.0, g1, 1990));
-        films.add(new Film("Aaa",7.0, g4, 2021));
+        Film f1 = new Film("Aaa",7.0, g4, 2021);
+        films.add(f1);
         Scanner sc = new Scanner(System.in);
         System.out.println("Choose sort: 1 - by name");
         System.out.println("             2 - by rating");
@@ -35,6 +33,7 @@ public class Main {
         for (Film f: films) {
             System.out.println(f);
         }
+
 
     }
 

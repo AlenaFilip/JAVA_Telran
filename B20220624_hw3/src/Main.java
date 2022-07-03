@@ -11,7 +11,7 @@ public class Main {
         User u3 =new User("Ivanov");
         User u4 =new User("Katya","Potapova","katya@tut.by");
         User u41 =new User("Katya","Potapova","   ");
-        User u42 =new User("Katya","Potapova"," dd  ");
+        User u42 =new User("Katya","Pitapova"," dd  ");
         User u5 =new User("Ivan","Ivanov","email5");
         List<User> list1 = Arrays.asList(new User[] {u1, u3,u4,u5});
         List<User> list2 = Arrays.asList(new User[] {u1, u2,u2,u4,u41});
@@ -23,7 +23,15 @@ public class Main {
         for (String l : listEmails) {
             System.out.println(l);
         }
-
+        String s1 = "aaa";
+        String s2 = "aaa";
+        s2=s2+"1";
+        System.out.println(s1==s2);
+        System.out.println(u41.getfName()==u42.getfName());
+        s1="aaAaa";
+        s2="aaaaa";
+        System.out.println(s1==s2);
+        System.out.println(s1.equalsIgnoreCase(s2));
     }
 
     // добавляю в Set String - email, проверив на null и наличие "@"

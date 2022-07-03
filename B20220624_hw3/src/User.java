@@ -13,6 +13,10 @@ public class User {
         return email;
     }
 
+    public String getfName() {
+        return fName;
+    }
+
     public User(String lName) {
         this.lName = lName;
     }

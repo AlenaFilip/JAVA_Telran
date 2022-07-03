@@ -14,6 +14,10 @@ public class User {
         email = "unknown";
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

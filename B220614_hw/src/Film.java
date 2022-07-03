@@ -27,6 +27,10 @@ public class Film {
         return year;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return name + ", rating " + rating +" " + genre.toString() + ", " + year +" year";
