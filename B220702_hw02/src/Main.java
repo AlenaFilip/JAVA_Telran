@@ -24,7 +24,7 @@ public class Main {
         Group gr2 = new Group("g23 evening",List.of(st6,st7,st3,st4,st7,st10));
         Group gr3 = new Group("g28 morning",List.of(st1,st2,st3,st8,st9,st7));
         List<Group> groups = Arrays.asList(new Group[] {gr1, gr2, gr3});
-        Set <Student> allstudents = makeAllStudents(groups);
+        TreeSet <Student> allstudents = makeAllStudents(groups);
         for (Student s: allstudents) {
             System.out.println(s);
         }
@@ -35,29 +35,21 @@ public class Main {
         }
     }
 
-    public static List<Student> make3Students(Set<Student> set){
+    public static List<Student> make3Students(TreeSet <Student> set){
         List<Student> result = new ArrayList<>();
-        int count = 3;
-        for (Student st: set) {
-            result.add(st);
-            count--;
-            if (count==0) break;
+        for (int i = 0; i < 3; i++) {
+            result.add(set.pollFirst());
         }
         return result;
     }
 
-    public static Set<Student> makeAllStudents(List<Group> groups){
-        Set <Student> result = new TreeSet<>();
+    public static TreeSet<Student> makeAllStudents(List<Group> groups){
+        TreeSet <Student> result = new TreeSet<>();
         for (Group g :groups) {
             for (Student st: g.getStudents()) {
                 result.add(st);
             }
         }
-        return result;
-    }
-
-    public static Set <Student> best3Student(){
-        Set<Student> result = new TreeSet<>();
         return result;
     }
 }
