@@ -16,9 +16,9 @@ public class Main {
         Student st5 = new Student("Jack", 3);
         Student st6 = new Student("John", 35);
         Student st7 = new Student("Alla", 35);
-        Student st8 = new Student("Olga", 17);
-        Student st9 = new Student("Alena", 30);
-        Student st0 = new Student("Dzmitry", 30);
+        Student st8 = new Student("Olga", 35);
+        Student st9 = new Student("Alena", 35);
+        Student st0 = new Student("Dzmitry", 35);
         Student st10 = new Student("Andrei", 71);
         Group gr1 = new Group("g20 morning",List.of(st1,st2,st3,st4,st7,st9));
         Group gr2 = new Group("g23 evening",List.of(st6,st7,st3,st4,st7,st10));
