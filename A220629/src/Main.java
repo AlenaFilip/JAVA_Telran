@@ -1,14 +1,24 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        List<Integer> ls = Arrays.asList(4,5,6,3,777);
-        System.out.println(ls);
-        List<String> lss = Arrays.asList("ss","dedede","111");
-        System.out.println(lss);
+        Queue<String> qu = new PriorityQueue<>((s1, s2) -> s2.length() - s1.length());
+
+        Queue<String> queue = new PriorityQueue<>();
+        queue.add("we");
+        queue.add("are");
+        queue.add(" studing");
+        queue.add("the");
+        queue.add("Queue");
+        queue.add("1");
+        queue.add("3");
+        queue.add("interface");
+
+        System.out.println(queue);
+
+        while (!queue.isEmpty()){
+            System.out.println(queue.remove());
+        }
     }
 }
