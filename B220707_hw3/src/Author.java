@@ -9,11 +9,15 @@ public class Author {
         this.lName = lName;
     }
 
-    public boolean equals(Author o) {
+    @Override
+    public boolean equals(Object o) {
         if (this == o) return true;
-        return Objects.equals(fName, o.fName) && Objects.equals(lName, o.lName);
+        if (!(o instanceof Author)) return false;
+        Author author = (Author) o;
+        return Objects.equals(fName, author.fName) && Objects.equals(lName, author.lName);
     }
 
+    @Override
     public int hashCode() {
         return Objects.hash(fName, lName);
     }
