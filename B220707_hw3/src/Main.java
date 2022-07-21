@@ -113,6 +113,7 @@ a)      написать метод, который проверит, есть �
     //сформировать map<Author, List<Book>>
     public static Map<Author,List<Book>> createMapBooks(List<Book> books){
         Map<Author,List<Book>> result = new HashMap<>();
+        if (books==null) return result;
         for (Book bk: books) {
             List<Author> la = bk.getAuthors();
             for (Author au: la) {

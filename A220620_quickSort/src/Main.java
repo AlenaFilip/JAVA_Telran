@@ -13,7 +13,7 @@ public class Main {
     }
 
     private static void quickSort(int[] array, int start, int end) {
-        System.out.println("start "+ start + ", end " + end);
+//        System.out.println("start "+ start + ", end " + end);
         if (start >= end) { // условие выходы из рекурсии
             return;
         }
