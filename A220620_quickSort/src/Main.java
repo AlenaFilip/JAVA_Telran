@@ -6,7 +6,7 @@ public class Main {
         // partition(array, start, end): int indexPivot -> helper method for rearrange array elements form pivot
         // swap(array, first, second): void -> helper method for swapping two elements
 
-        int[] array = {39, 22, 2, 55, 6, 20, -1, 555, 203, 100000, 4};
+        int[] array = {1,3,6,2,8,0,4,9,5};
         quickSort(array, 0, array.length - 1);
         System.out.println(Arrays.toString(array));
 
@@ -27,14 +27,27 @@ public class Main {
         int index = partitionStart;
         for (int i = partitionStart; i < partitionEnd; i++) {
             if(array[i] <= pivot) {
-                swap(array, i, index);
+                if (i!=index) swap(array, i, index);
                 index++;
             }
         }
         swap(array, partitionEnd, index);
-
         return index;
     }
+
+//    i              номер элемента      index
+//  перед          0 1 2 3 4 5 6 7 8      после
+//  сравнением                          сравнения
+//
+//     0    1      1 3 6 2 8 0 4 9 5   +    1
+//     1    3      1 3 6 2 8 0 4 9 5   +    2
+//     2    6      1 3 6 2 8 0 4 9 5        2
+//     3    2      1 3 2 6 8 0 4 9 5   +    3    2 <-> 6
+//     4    8      1 3 2 6 8 0 4 9 5        3
+//     5    0      1 3 2 0 8 6 4 9 5   +    4    0 <-> 6
+//     6    4      1 3 2 0 4 6 8 9 5   +    5    4 <-> 8
+//     7    9      1 3 2 0 4 6 8 9 5        5
+//  конец          1 3 2 0 4 5 8 9 6        5    6 <-> 5
 
     private static void swap(int[] array, int source, int destination) {
         int temp = array[source];
@@ -42,3 +55,4 @@ public class Main {
         array[destination] = temp;
     }
 }
+

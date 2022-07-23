@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         int[] arr = {0,1,1,1,2,2,5,5,6,6,6,6,10,10,123};
-        int x = 5;
+        int x = 500;
         int positionX = findPosition(arr,x,0,arr.length-1);
         // рекурсией находим любую позицию х в массиве
         System.out.println(x+" находится на позиции "+positionX);
@@ -38,7 +38,7 @@ public class Main {
     }
 
     // если находим элемент - возвращаем его позицию
-    // иначе делим массив пополам и проверяем слевую или правую часть на вхождение
+    // иначе делим массив пополам и проверяем левую или правую часть на вхождение
     public static int findPosition(int[] arr,int x,int left, int right){
         if (left == right){
             if(arr[left]==x) return left;
